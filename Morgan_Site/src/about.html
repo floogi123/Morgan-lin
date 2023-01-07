@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Special+Elite&display=swap');
+  </style>
+  
+
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.5/dist/flowbite.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+
+
+    <title></title>
+</head>
+<body>
+  <nav  class="p-5  shadow md:flex md:items-center md:justify-between">
+    <div class="flex justify-between items-center ">
+      <span class="text-2xl font-[Poppins] cursor-pointer">
+        <img class="h-10 inline"
+          src="Assets/Morgan_Lin_Signature.png">
+        
+      </span>
+
+      <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+        <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+      </span>
+    </div>
+
+    <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+      <li class="mx-4 my-6 md:my-0">
+        <a href="#" class="text-xl font hover:text-cyan-500 duration-500">Home</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="about.html" class="text-xl hover:text-cyan-500 duration-500">About Me</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="Assets\Mugeng_Morgan_Lin_Resume.pdf" target="_blank"class="text-xl hover:text-cyan-500 duration-500">Experiences</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="art.html" class="text-xl hover:text-cyan-500 duration-500">Art Portfolio</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="#" class="text-xl hover:text-cyan-500 duration-500">Projects</a>
+      </li>
+    
+      <a href="contact.html">
+      <button class="flex items-center justify-center bg-cyan-400 text-black  duration-500 px-6 py-2 mx-4 hover:bg-cyan-500 rounded ">
+        Contact Me
+      </button>
+    </a>
+<h2 class=""></h2>
+    </ul>
+  </nav>
+      <div class="h-screen flex flex-col items-center justify-center " >
+        <div class="flex flex-nowrap gap-7 fill-white">
+    
+          <div class="inline-block align-middle">
+
+            <div class=" text-9xl "> 
+              <div class=" text-3xl w-[51rem]  font-Montserrat"> 
+                <div class="">
+
+                  <span class="py-10"><strong class="text-9xl">Hi there!</strong></span>
+
+                </div>
+                
+                <div class=" px-2 font-Montserrat">
+                <span id="text" ><br/>I'm a <div class="text-blue-400">mathematician,</div> 
+                  <div class="text-yellow-400">history buff,</div> and <div class="text-green-300">ardent photographer</div> 
+                  who loves to experiment with unconventional creativity. I'm always on the lookout 
+                  for new ways to approach problems and find innovative solutions, whether I'm working 
+                  on a math proof or capturing the perfect shot. I'm excited to share my passion for 
+                  these subjects with others and to continue learning and growing as a person.</span>  
+                </div> 
+              </div>
+              <div class="justify-center align-middle items-center flex py-10">
+                <a href="art.html">
+                  <img src="Assets/camera.png">
+                  </a>
+
+              </div>
+            </div>
+          </div>
+        
+          <div>
+            <img id="img"src="Assets/ipadmorgan.png">
+          </div>
+        </div>
+        <div>
+          
+          
+
+        </div>
+        
+        </div><!--
+        <div class="h-screen flex  items-center justify-center">
+        <div class="flex flex-nowrap gap-7 fill-white">
+          <div class=""> 
+            <img src="Assets/unicef.PNG">
+          </div>
+          <div cla>
+            <span>heyyy</span>
+          </div>
+        </div>
+      </div>-->
+      <script>
+        function Menu(e){
+          let list = document.querySelector('ul');
+          e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
+        }
+      </script>
+      <script>
+        // import SplitType from 'split-type'
+         let text = new SplitType('#text');
+         let characters = document.querySelectorAll('.char');
+         for(i=0; i<characters.length; i++){
+           characters[i].classList.add('translate-y-full');
+         }
+        gsap.to('.char',{
+           y:0,
+           stagger: 0.005,
+           delay: 0.002,
+           duration: 0.5
+     
+        });
+        let images = document.querySelectorAll('#img');
+        for(i=0; i<images.length; i++){
+          images[i].classList.add();
+        }
+        gsap.fromTo('#img', {opacity: 0},
+
+        {opacity: 1, 
+          delay: 1, 
+          stagger: 0.05,
+          duration: 10, 
+          ease: "elastic"
+        })
+
+     
+       </script>
+</body>
+</html>
